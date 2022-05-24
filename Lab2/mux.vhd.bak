@@ -1,0 +1,24 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+
+entity mux is
+port (
+	hexA, Hexb
+	mux_select
+	hex_out
+);
+
+end entity mux
+
+architecture mux_logic of mux is
+
+begin
+
+with mux_select(1 downto 0) select
+
+hex_out <= hexA when (mux_select = '0') else hexB;
+
+end mux_logic
+
+ 
